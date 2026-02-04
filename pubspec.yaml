@@ -1,0 +1,87 @@
+name: gps_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.0.0
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_riverpod: ^2.5.0
+
+  # Media & Gallery
+  photo_manager: ^3.0.0
+  extended_image: ^8.0.0
+  flutter_staggered_grid_view: ^0.7.0
+
+  # Camera
+  camera: ^0.11.0
+  image_picker: ^1.0.7
+
+  # Permissions
+  permission_handler: ^11.0.0
+  device_info_plus: ^11.1.0
+
+  # AI & ML
+  google_mlkit_face_detection: ^0.11.0
+  google_mlkit_image_labeling: ^0.11.0
+  image:
+
+  # Video
+  video_player: ^2.8.2
+  video_thumbnail: ^0.5.3
+
+  # Location
+  geolocator: ^11.0.0
+  geocoding: ^3.0.0
+  google_maps_flutter: ^2.6.0
+
+  # Storage & Files
+  path_provider: ^2.1.2
+  file_picker: ^8.0.0
+  archive: ^3.4.9
+
+  # Security
+  local_auth: ^2.2.0
+  flutter_secure_storage: ^9.0.0
+  encrypt: ^5.0.3
+
+  # Sharing & Utilities
+  share_plus: ^7.2.1
+  flutter_image_compress: ^2.1.0
+
+  # Database
+  isar: ^3.1.0
+
+  # UI & Animations
+  flutter_animate: ^4.5.0
+  lottie:
+
+  google_nav_bar:
+  photo_manager_image_provider: ^2.0.0
+  gal: ^2.3.2
+  media_scanner:
+  date_format:
+  init:
+  flutter_isolate:
+  tflite_flutter: 0.11.0
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/model/mobilefacenet.tflite
+    - assets/model/FaceAntiSpoofing.tflite
+
