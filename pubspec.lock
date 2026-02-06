@@ -728,14 +728,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.2.2"
-  init:
-    dependency: "direct main"
-    description:
-      name: init
-      sha256: "4e222f616f16f47a89ac64022472de03082bd1e6f39d25308217d6e630597e6c"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.0"
   intl:
     dependency: transitive
     description:
@@ -844,10 +836,10 @@ packages:
     dependency: "direct main"
     description:
       name: lottie
-      sha256: "377d87b8dcef640c04717e93afb86a510f0e1117a399ab94dc4b3f39c85eaa87"
+      sha256: "893da7a0022ec2fcaa616f34529a081f617e86cc501105b856e5a3184c58c7c2"
       url: "https://pub.dev"
     source: hosted
-    version: "3.3.0"
+    version: "1.4.3"
   matcher:
     dependency: transitive
     description:
@@ -864,14 +856,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.11.1"
-  media_scanner:
-    dependency: "direct main"
-    description:
-      name: media_scanner
-      sha256: "9cce7e8c3558ee8af8c7bf05f90d4e2b2f509bf2b9206489ab4d112bad8afb48"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.2.0"
   meta:
     dependency: transitive
     description:

@@ -1,11 +1,11 @@
 class Person {
-  String name;
-  List<String> photos;
-  List<List<double>> embeddings;
+  final String name;
+  final List<String> faceImages; // cropped face paths
+  final List<List<double>> embeddings;
 
   Person({
     required this.name,
-    required this.photos,
+    required this.faceImages,
     required this.embeddings,
   });
 }

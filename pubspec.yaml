@@ -6,7 +6,6 @@ version: 1.0.0+1
 environment:
   sdk: ^3.0.0
 
-
 dependencies:
   flutter:
     sdk: flutter
@@ -30,7 +29,8 @@ dependencies:
   # AI & ML
   google_mlkit_face_detection: ^0.11.0
   google_mlkit_image_labeling: ^0.11.0
-  image:
+  image: ^4.0.0
+  tflite_flutter: ^0.11.0
 
   # Video
   video_player: ^2.8.2
@@ -60,18 +60,13 @@ dependencies:
 
   # UI & Animations
   flutter_animate: ^4.5.0
-  lottie:
+  lottie: ^1.4.0
 
-  google_nav_bar:
+  google_nav_bar: ^5.0.5
   photo_manager_image_provider: ^2.0.0
   gal: ^2.3.2
-  media_scanner:
-  date_format:
-  init:
-  flutter_isolate:
-  tflite_flutter: 0.11.0
-
-
+  date_format: ^2.0.7
+  flutter_isolate: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -84,4 +79,3 @@ flutter:
   assets:
     - assets/model/mobilefacenet.tflite
     - assets/model/FaceAntiSpoofing.tflite
-

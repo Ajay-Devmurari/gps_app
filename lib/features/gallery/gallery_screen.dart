@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:photo_manager/photo_manager.dart';
 import '../../presentation/widgets/media_grid.dart';
 import 'people_group_screen.dart';
+
 class GalleryScreen extends StatefulWidget {
   const GalleryScreen({super.key, required this.onOpenCamera});
+
   final VoidCallback onOpenCamera;
 
   @override
@@ -28,7 +30,8 @@ class GalleryScreenState extends State<GalleryScreen> {
       return;
     }
     await PhotoManager.clearFileCache();
-    final albums = await PhotoManager.getAssetPathList(onlyAll: true, type: RequestType.image);
+    final albums = await PhotoManager.getAssetPathList(
+        onlyAll: true, type: RequestType.image);
     if (albums.isEmpty) return;
 
     final assets = await albums.first.getAssetListPaged(page: 0, size: 1000);
@@ -55,9 +58,12 @@ class GalleryScreenState extends State<GalleryScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(selected.isEmpty ? 'Gallery' : '${selected.length} Selected'),
+        title:
+            Text(selected.isEmpty ? 'Gallery' : '${selected.length} Selected'),
         leading: isSelecting
-            ? IconButton(icon: const Icon(Icons.close), onPressed: () => setState(() => selected.clear()))
+            ? IconButton(
+                icon: const Icon(Icons.close),
+                onPressed: () => setState(() => selected.clear()))
             : null,
         actions: [
           if (isSelecting)
@@ -71,14 +77,10 @@ class GalleryScreenState extends State<GalleryScreen> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (_) => const PeopleGroupScreen(),
-                ),
+                MaterialPageRoute(builder: (_) => const PeopleGroupScreen()),
               );
             },
           ),
-
-
           IconButton(
             icon: const Icon(Icons.camera_alt),
             onPressed: widget.onOpenCamera,
@@ -88,17 +90,21 @@ class GalleryScreenState extends State<GalleryScreen> {
       body: images.isEmpty
           ? const Center(child: Text("No Images Found"))
           : MediaGrid(
-        images: images,
-        selected: selected,
-        isGridView: isGridView,
-        onToggle: (asset) => setState(() => selected.contains(asset) ? selected.remove(asset) : selected.add(asset)),
-        onToggleDate: (assets) {
-          setState(() {
-            assets.every((a) => selected.contains(a)) ? selected.removeAll(assets) : selected.addAll(assets);
-          });
-        },
-        onDeleteDone: fetchAssets,
-      ),
+              images: images,
+              selected: selected,
+              isGridView: isGridView,
+              onToggle: (asset) => setState(() => selected.contains(asset)
+                  ? selected.remove(asset)
+                  : selected.add(asset)),
+              onToggleDate: (assets) {
+                setState(() {
+                  assets.every((a) => selected.contains(a))
+                      ? selected.removeAll(assets)
+                      : selected.addAll(assets);
+                });
+              },
+              onDeleteDone: fetchAssets,
+            ),
     );
   }
 }
